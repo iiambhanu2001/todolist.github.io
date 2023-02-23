@@ -22,6 +22,7 @@ body{
     border: none;
     font-size: larger;
     font-family: cursive;
+    outline:none;
 }
 .input::placeholder{
     color: lightgray;
