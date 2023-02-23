@@ -7,9 +7,9 @@ let newli=document.querySelector(".list");
 
 
 let list=JSON.parse(localStorage.getItem("list"));
-list.forEach(work=>{
+for (var i = 0; i < list.length; i++) { 
   toDoList(work);
-})
+}
 
 
 ///////final function/////////////////
