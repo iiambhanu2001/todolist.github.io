@@ -5,11 +5,10 @@ let inputel=document.querySelector(".input");
 let newli=document.querySelector(".list");
 ///////////////geting elements from local storage///////
 
-
-let list=JSON.parse(localStorage.getItem("list"));
-for (var i = 0; i < list.length; i++) { 
-  toDoList(work);
-}
+let List=JSON.parse(localStorage.getItem('List'));
+List.forEach(function(work){
+   toDoList(work);
+})
 
 
 ///////final function/////////////////
@@ -59,14 +58,14 @@ saved();
 
 function saved(){
   const listel=document.querySelectorAll("li");
-   list =[];
+   List =[];
   listel.forEach(li1=>{
-         list.push({
+         List.push({
           name: li1.innerText,
           checked: li1.classList.contains("checked"),
          })
   });
-       localStorage.setItem("list",JSON.stringify(list));
+       localStorage.setItem("List",JSON.stringify(List));
 }
  
 
