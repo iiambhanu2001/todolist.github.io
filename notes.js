@@ -6,7 +6,7 @@ let newli=document.querySelector(".list");
 ///////////////geting elements from local storage///////
 
 let List=JSON.parse(localStorage.getItem('List'));
-List.forEach(function(work){
+(List||[]) .forEach(function(work){
    toDoList(work);
 })
 
